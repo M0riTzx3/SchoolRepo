@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TitledPane animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="530.0" prefWidth="738.0" text="User Management" xmlns="http://javafx.com/javafx/8.0.60"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="createUser.UserCreationController">
+    <AnchorPane prefHeight="528.0" prefWidth="730.0">
+        <Button layoutX="448.0" layoutY="122.0" mnemonicParsing="false" onAction="#addUser" text="Add"/>
+        <TableView id="tableView" fx:id="tableView" layoutX="23.0" layoutY="224.0" prefHeight="200.0"
+                   prefWidth="698.0">
+            <columns>
+                <TableColumn id="userIDColumn" fx:id="userIDColumn" prefWidth="119.0" text="UserID">
+                </TableColumn>
+                <TableColumn id="nameColumn" fx:id="nameColumn" prefWidth="178.0" text="Name">
+                </TableColumn>
+                <TableColumn id="lastNameColumn" fx:id="lastNameColumn" prefWidth="213.0" text="LastName">
+                </TableColumn>
+                <TableColumn id="typeColumn" fx:id="typeColumn" prefWidth="187.0" text="Type">
+                </TableColumn>
+            </columns>
+        </TableView>
+        <TextField fx:id="textFieldName" layoutX="177.0" layoutY="39.0"/>
+        <TextField fx:id="textFieldLastName" layoutX="177.0" layoutY="79.0"/>
+        <TextField fx:id="textFieldPassword" layoutX="177.0" layoutY="122.0"/>
+        <Label layoutX="85.0" layoutY="44.0" prefHeight="21.0" prefWidth="70.0" text="Name"/>
+        <Label layoutX="85.0" layoutY="84.0" prefHeight="21.0" prefWidth="72.0" text="Last Name"/>
+        <Label layoutX="85.0" layoutY="127.0" prefHeight="21.0" prefWidth="89.0" text="Password"/>
+        <CheckBox id="checkBoxAdmin" layoutX="448.0" layoutY="44.0" mnemonicParsing="false" onAction="#isChecked"
+                  text="Admin"/>
+        <Button fx:id="deleteButton" layoutX="590.0" layoutY="435.0" mnemonicParsing="false" onAction="#deleteUser"
+                text="Delete User"/>
+        <Button id="reloadTable" fx:id="reloadTable" layoutX="74.0" layoutY="185.0" mnemonicParsing="false"
+                onAction="#table_reload" text="Reload Table"/>
+    </AnchorPane>
+</TitledPane>

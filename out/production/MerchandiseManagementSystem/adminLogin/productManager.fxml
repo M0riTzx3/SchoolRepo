@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TitledPane animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="738.0" text="Product Management" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="adminLogin.ProductController">
+   <content>
+      <AnchorPane prefHeight="528.0" prefWidth="730.0">
+         <children>
+             <Button layoutX="448.0" layoutY="122.0" mnemonicParsing="false" onAction="#addProduct" text="Add" />
+            <TableView id="tableView" fx:id="tableView" layoutX="23.0" layoutY="224.0" prefHeight="200.0" prefWidth="698.0">
+              <columns>
+                <TableColumn id="userIDColumn" fx:id="productNrColumn" prefWidth="178.0" text="ArticleNr">
+                </TableColumn>
+                <TableColumn id="nameColumn" fx:id="productNameColumn" prefWidth="198.0" text="Product name">
+                </TableColumn>
+                  <TableColumn id="lastNameColumn" fx:id="stockValueColumn" prefWidth="146.0" text="Stock">
+                  </TableColumn>
+                  <TableColumn id="passwordColumn" fx:id="priceValueColumn" prefWidth="175.0" text="Price">
+                  </TableColumn>
+              </columns>
+            </TableView>
+            <TextField fx:id="textFieldProductName" layoutX="177.0" layoutY="39.0" />
+            <TextField fx:id="textFieldStock" layoutX="177.0" layoutY="79.0" />
+            <TextField fx:id="textFieldPrice" layoutX="177.0" layoutY="122.0" />
+            <Label layoutX="50.0" layoutY="44.0" prefHeight="21.0" prefWidth="99.0" text="Product name" />
+            <Label layoutX="50.0" layoutY="84.0" prefHeight="21.0" prefWidth="72.0" text="Stock" />
+            <Label layoutX="50.0" layoutY="127.0" prefHeight="21.0" prefWidth="89.0" text="Price" />
+            <Button fx:id="deleteButton" layoutX="590.0" layoutY="435.0" mnemonicParsing="false" onAction="#deleteUser" text="Delete Product" />
+            <Button id="reloadTable" fx:id="reloadTable" layoutX="69.0" layoutY="171.0" mnemonicParsing="false" onAction="#reloadTable" text="Reload Table" />
+            <Button fx:id="button1" layoutX="496.0" layoutY="50.0" mnemonicParsing="false" onAction="#test" text="Button" />
+         </children>
+      </AnchorPane>
+   </content>
+</TitledPane>
